@@ -16,7 +16,9 @@
               offBlack: "#131313",
               gray: "#4E4E4E",
             },
-            backgroundImage: "url(./images/banner.jpg)",
+            backgroundImage: {
+              banner: "url('./images/banner.jpg')",
+            },
           },
         },
       };
@@ -24,21 +26,42 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <nav class="flex justify-between items-center mx-40 py-4">
-        <a class="text-2xl font-bold" href="#">Jhaka Naka Production</a>
-        <ul class="flex">
-          <li class="mr-10">
-            <a class="text-lg" href="#about">About Us</a>
-          </li>
-          <li class="mr-10">
-            <a class="text-lg" href="#about">Our Movies</a>
+    <header class="bg-white absolute w-full">
+      <nav class="flex justify-between items-center px-5 lg:px-40 h-20">
+        <a class="text-2xl font-bold uppercase" href="#"
+          >Jhaka Naka Production</a
+        >
+        <ul class="lg:flex gap-4 text-lg hidden">
+          <li>
+            <a href="#about">About Us</a>
           </li>
           <li>
-            <a class="text-lg" href="#services">Services</a>
+            <a href="#about">Our Movies</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
           </li>
         </ul>
       </nav>
     </header>
+    <!-- Hero Section  -->
+    <section class="h-screen pt-20 flex items-center bg-banner bg-cover">
+      <div class="ml-40 w-1/2 pr-40 text-white">
+        <p class="text-2xl">Movie production studio</p>
+        <h1 class="text-6xl font-semibold mb-3">
+          Films MAde to <span class="text-yellow">Perfection</span>
+        </h1>
+        <p class="text-lg mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        </p>
+        <button
+          type="button"
+          class="text-xl hover:border-yellow hover:text-yellow transition ease-in-out duration-300 py-2 px-4 border-2 rounded"
+        >
+          Discover More
+        </button>
+      </div>
+    </section>
   </body>
 </html>
